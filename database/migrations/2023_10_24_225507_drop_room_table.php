@@ -11,9 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('room', function (Blueprint $table) {
-            $table->dropColumn('wifi');
-        });
+        Schema::dropIfExists('room');
     }
 
     /**
@@ -21,8 +19,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('room', function (Blueprint $table) {
-            $table->string('wifi');
-        });
+        //
     }
 };
