@@ -5,6 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
+// Criando a request de usuário
 class UserRequest extends FormRequest
 {
     public function rules()

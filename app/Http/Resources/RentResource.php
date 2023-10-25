@@ -2,9 +2,9 @@
 
 namespace App\Http\Resources;
 
-use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
+// Criando a resource de aluguel
 class RentResource extends JsonResource
 {
     public function toArray($request)

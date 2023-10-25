@@ -6,6 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
+// Configurando a middleware de checagem da role do usuário
 class CheckUserType
 {
     public function handle(Request $request, Closure $next, string $role): Response

@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
+    // Método de login
     public function login(Request $request)
     {
         $data = $request->all();

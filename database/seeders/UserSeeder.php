@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
+    // Seeder para criar os usuários padrões
     public function run()
     {
         User::query()->create([

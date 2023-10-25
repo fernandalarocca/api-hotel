@@ -11,6 +11,7 @@ use App\Models\Room;
 
 class RoomController extends Controller
 {
+    // Método para listar todos os quartos
     public function list()
     {
         $perpage = request()->query('limit', 5);
@@ -18,11 +19,13 @@ class RoomController extends Controller
         return RoomResource::collection($rooms);
     }
 
+    // Método para listar um único quarto
     public function show(Room $room)
     {
         return RoomResource::make($room);
     }
 
+    // Método para criar um quarto
     public function create(RoomRequest $request)
     {
         $data = $request->validated();
@@ -30,6 +33,7 @@ class RoomController extends Controller
         return RoomResource::make($room);
     }
 
+    // Método para editar um quarto
     public function update(RoomRequest $request, Room $room)
     {
         $data = $request->validated();
@@ -37,6 +41,7 @@ class RoomController extends Controller
         return RoomResource::make($room);
     }
 
+    // Método para deletar um quarto
     public function delete(Room $room)
     {
         $room->delete();

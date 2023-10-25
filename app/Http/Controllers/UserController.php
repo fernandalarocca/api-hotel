@@ -10,6 +10,7 @@ use App\Models\User;
 
 class UserController extends Controller
 {
+    // Método para listar todos os usuários
     public function list()
     {
         $perpage = request()->query('limit', 5);
@@ -17,11 +18,13 @@ class UserController extends Controller
         return UserResource::collection($users);
     }
 
+    // Método para listar um único usuário
     public function show(User $user)
     {
         return UserResource::make($user);
     }
 
+    // Método para criar um usuário
     public function create(UserRequest $request)
     {
         $data = $request->validated();
@@ -29,6 +32,7 @@ class UserController extends Controller
         return UserResource::make($user);
     }
 
+    // Método para editar um usuário
     public function update(UserRequest $request, User $user)
     {
         $data = $request->validated();
@@ -36,6 +40,7 @@ class UserController extends Controller
         return UserResource::make($user);
     }
 
+    // Método para deletar um usuário
     public function delete(User $user)
     {
         $user->delete();

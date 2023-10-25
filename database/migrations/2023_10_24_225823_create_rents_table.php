@@ -9,6 +9,8 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
+
+//    Criando tabela de aluguel
     public function up(): void
     {
         Schema::create('rents', function (Blueprint $table) {

@@ -7,6 +7,7 @@ use App\Models\Guest;
 
 class CreateGuestAction
 {
+    //Ação para criar um hóspede
     public function execute(array $data): GuestResource
     {
         $guest = Guest::make($data);

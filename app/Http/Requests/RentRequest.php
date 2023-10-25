@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+// Criando a request de aluguel
 class RentRequest extends FormRequest
 {
     public function rules(): array

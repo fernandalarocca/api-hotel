@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Hash;
 
 class UpdateUserAction
 {
+    //Ação para editar um usuário
     public function execute(array $data, User $user): User
     {
         if ($password = data_get($data, 'password')){

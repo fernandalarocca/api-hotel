@@ -9,6 +9,7 @@ use App\Models\Rent;
 
 class RentController extends Controller
 {
+    // Método para listar todos os aluguéis
     public function list()
     {
         $perpage = request()->query('limit', 5);
@@ -16,11 +17,13 @@ class RentController extends Controller
         return RentResource::collection($rents);
     }
 
+    // Método para listar um único aluguel
     public function show(Rent $rent)
     {
         return RentResource::make($rent);
     }
 
+    // Método para criar um aluguel
     public function create(RentRequest $request)
     {
         $data = $request->validated();
@@ -28,6 +31,7 @@ class RentController extends Controller
         return RentResource::make($rent);
     }
 
+    // Método para editar um aluguel
     public function update(RentRequest $request, Rent $rent)
     {
         $data = $request->validated();
@@ -35,6 +39,7 @@ class RentController extends Controller
         return RentResource::make($rent);
     }
 
+    // Método para deletar um aluguel
     public function delete(Rent $rent)
     {
         $rent->delete();

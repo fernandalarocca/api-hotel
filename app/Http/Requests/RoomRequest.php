@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+// Criando a request de quarto
 class RoomRequest extends FormRequest
 {
     public function rules()

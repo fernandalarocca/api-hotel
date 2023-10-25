@@ -10,6 +10,7 @@ use App\Models\Guest;
 
 class GuestController extends Controller
 {
+    // Método para listar todos os hóspedes
     public function list()
     {
         $perpage = request()->query('limit', 5);
@@ -17,11 +18,13 @@ class GuestController extends Controller
         return GuestResource::collection($guests);
     }
 
+    // Método para listar um único hóspede
     public function show(Guest $guest)
     {
         return GuestResource::make($guest);
     }
 
+    // Método para criar um hóspede
     public function create(GuestRequest $request)
     {
         $data = $request->validated();
@@ -29,6 +32,7 @@ class GuestController extends Controller
         return GuestResource::make($guest);
     }
 
+    // Método para editar um hóspede
     public function update(GuestRequest $request, Guest $guest)
     {
         $data = $request->validated();
@@ -36,6 +40,7 @@ class GuestController extends Controller
         return GuestResource::make($guest);
     }
 
+    // Método para deletar um hóspede
     public function delete(Guest $guest)
     {
         $guest->delete();

@@ -4,6 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
+// Criando a resource de quarto
 class RoomResource extends JsonResource
 {
     public function toArray($request)
